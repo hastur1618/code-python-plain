@@ -6,7 +6,7 @@ sites that have a comment form to a CSV with a status.
 
 Env: SERPER_API_KEY.
 
-    python blog_comment_prospecting.py --niches "casino,sport betting" --out prospects.csv
+    python blog_comment_prospecting.py --niches "travel,home improvement" --out prospects.csv
 """
 from __future__ import annotations
 
@@ -66,7 +66,7 @@ def run(niches: list[str], out_path: Path) -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Blog comment prospecting (plain).")
-    p.add_argument("--niches", default="casino,sport betting")
+    p.add_argument("--niches", default="travel,home improvement")
     p.add_argument("--out", default="prospects.csv")
     a = p.parse_args()
     run([n.strip() for n in a.niches.split(",") if n.strip()], Path(a.out))

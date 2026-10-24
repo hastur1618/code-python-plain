@@ -5,7 +5,7 @@ every article to its own file.
 
 Env: OPENAI_API_KEY, OPENAI_MODEL (optional).
 
-    python bulk_article_generator.py --count 5 --brand "AcmeBet" --niche "online casino"
+    python bulk_article_generator.py --count 5 --brand "AcmeTravel" --niche "travel"
 """
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description="Bulk article generator (plain).")
     p.add_argument("--count", type=int, default=5)
     p.add_argument("--brand", default="{{CLIENT_BRAND}}")
-    p.add_argument("--niche", default="online casino")
+    p.add_argument("--niche", default="travel")
     p.add_argument("--out", default="articles")
     a = p.parse_args()
 

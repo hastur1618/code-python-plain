@@ -13,7 +13,7 @@ Usage:
     export OPENAI_API_KEY="sk-..."
     pip install -r requirements.txt     # openai>=1.40
     python gaming_article_desk.py --topics 3 --language english \
-        --anchor "best crypto casinos" --url "https://example.com"
+        --anchor "best project management tools" --url "https://example.com"
 
 Run `python gaming_article_desk.py --help` for all options.
 """
